@@ -1,0 +1,59 @@
+
+![LOGO](@site/static/img/resources/authmeReloaded/logo.png)
+
+# 简介
+
+在您的服务器上防止用户名被盗用，保护您的离线模式服务器或增强您的在线模式服务器的安全性。
+
+AuthMeReloaded 阻止未经认证的玩家执行放置方块、移动、输入命令或使用库存等操作。
+
+它还可以踢出玩家名称过长或过短，或者来自被禁止的国家的玩家。
+
+通过 Session Login 功能，无需在每次进入服务器时重复登录验证。
+
+插件的配置文件结构相当完善，可以启用或禁用每个命令和每个功能。
+
+还可以自定义语言文件，以便将插件的消息翻译成需要的内容。 
+
+# 功能
+- **可以通过电子邮件找回密码**
+- 用户名保护。
+- 国家白名单/黑名单 [(国家代码)](https://dev.maxmind.com/geoip/legacy/codes/iso3166/)
+- **内置反机器人系统**
+- **强制登录功能：管理员可以通过控制台命令登录所有帐户**
+- 避免出现“从另一个位置登录”消息
+- 两步验证（2FA）支持
+- Session Login
+- 可编辑的翻译和消息
+- **MySQL 和 SQLite 存储支持**
+- 支持的密码加密算法：SHA256、ARGON2、BCRYPT、PBKDF2、[xAuth](https://github.com/CypherX/xAuth/wiki/Password-Hashing)
+- 支持的替代注册方法：
+  - PHPBB、VBulletin：PHPBB - MD5VB
+  - Xenforo：XFBCRYPT
+  - MyBB：MYBB
+  - IPB3：IPB3
+  - IPB4：IPB4
+  - PhpFusion：PHPFUSION
+  - Joomla：JOOMLA
+  - WBB3：WBB3*
+  - SHA512：SALTEDSHA512
+  - DoubleSaltedMD5：SALTED2MD5
+  - WordPress：WORDPRESS
+  - [支持的哈希列表](https://github.com/AuthMe/AuthMeReloaded/blob/master/docs/hash_algorithms.md)
+- 自定义 MySQL 表/列名称（与论坛数据库一起使用时很有用）
+- **缓存数据库查询**
+- **与 Citizens2、CombatTag、CombatTagPlus 完全兼容**
+- 与 Minecraft MOD 模组（如 **BuildCraft 或 RedstoneCraft**）兼容
+- 限制用户（将用户名与 IP 关联）
+- 保护玩家的库存，直到登录成功（需要 ProtocolLib）
+- 保存玩家退出位置
+- 自动数据库备份
+- 可用语言：[翻译](https://github.com/AuthMe/AuthMeReloaded/blob/master/docs/translations.md)
+- 内置的弃用 FlatFile（auths.db）到 SQL（authme.sql）转换器
+- **从其他插件（如 Rakamak、xAuth、CrazyLogin、RoyalAuth 和 vAuth）导入该插件的数据中**
+
+# 流行使用
+
+AuthMeReloaded 插件至今依然流行使用，下面数据图表显示了服务器使用量和玩家总在线数
+
+![bstats](https://bstats.org/signatures/bukkit/AuthMe.svg)

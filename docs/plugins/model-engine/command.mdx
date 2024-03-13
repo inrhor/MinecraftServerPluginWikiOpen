@@ -1,0 +1,72 @@
+---
+sidebar_position: 3
+title: 命令权限
+description: 了解有关命令权限的更多信息。
+---
+
+---
+
+
+import TableCommon from '@site/src/components/common/TableCommon';
+import CommandCardContainer from '@site/src/components/common/command/CommandCardContainer';
+
+
+### 前提概要
+
+<TableCommon
+    data={[
+        {'格式': '<>', '描述': '选填'},
+        {'格式': '[]', '描述': '必填'}
+    ]}
+/>
+
+### 命令权限
+
+<CommandCardContainer
+    data={[
+        {command: '/meg reload <config|models>',
+        description: '重新加载配置并重新导入模型。也可以指定要重新加载的内容。',
+        permission: 'modelengine.command.reload',
+        extra: <TableCommon
+            data={[
+                {'参数': 'config', '描述': '重新加载配置。'},
+                {'参数': 'models', '描述': '重新导入模型。'},
+            ]}
+        />},
+        {command: '/meg summon [model-id] <entity-type=PIG>', 
+        description: '在命令发送者的位置召唤一个带有模型的实体。', 
+        permission: 'modelengine.command.summon',
+        extra: <TableCommon
+            data={[
+                {'参数': 'model-id', '描述': '模型ID'},
+                {'参数': 'entity-type', '描述': '实体的类型。默认是猪'},
+            ]}
+        />},
+        {command: '/meg disguise [model-id] <see-self=true>',
+        description: '伪装命令发送者的模型。',
+        permission: 'modelengine.command.disguise',
+        extra: <TableCommon
+            data={[
+                {'参数': 'model-id', '描述': '模型ID'},
+                {'参数': 'see-self', '描述': '是否可以看到自己的模型。默认是true'},
+            ]}
+        />},
+        {command: '/meg undisguise',
+        description: '解除命令发送者的伪装状态。',
+        permission: 'modelengine.command.undisguise'},
+        {command: '/meg debug [debug-toggle] <true|false>',
+        description: '激活或停用调试选项。',
+        permission: 'modelengine.command.debug',
+        extra: <TableCommon
+            data={[
+                {'参数': 'debug-toggle', '描述': '调试选项。默认是true'},
+            ]}
+        />},
+        {command: '/meg menu',
+        description: '打开模型配置菜单。',
+        permission: 'modelengine.command.menu'},
+        {command: '',
+        description: '使用所有命令',
+        permission: 'modelengine.admin'},
+    ]}
+/>
